@@ -2,8 +2,8 @@
   "name": "portfolio",
   "version": "1.0.0",
   "scripts": {
-    "minify:css": "npx clean-css-cli -o dist/style.min.css css/style.css",
-    "minify:js": "npx terser js/script.js -o dist/script.min.js",
+    "minify:css": "npx clean-css-cli -o dist/style.min.css docs/css/style.css",
+    "minify:js": "npx terser js/script.js -o docs/dist/script.min.js",
     "build": "npm run minify:css && npm run minify:js"
   },
   "devDependencies": {
