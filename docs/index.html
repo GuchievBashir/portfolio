@@ -1,115 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio showcasing skills in programming languages and contact form">
-    <meta property="og:title" content="My Portfolio">
-    <meta property="og:description" content="Web developer portfolio with programming language skills and contact form">
-    <meta name="theme-color" content="#000000">
-
-    <!-- Preconnect & Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Minified Stylesheet -->
-    <link rel="stylesheet" href="dist/style.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<!-- Header / Hero Section -->
-<header class="site-header">
-    <nav class="navbar container">
-        <a href="#" class="logo">MyLogo</a>
-        <ul class="nav-links">
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+<nav id="main-nav">
+    <div class="container">
+        <a href="#" class="logo">MyPortfolio</a>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu nav-links">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contact">Контакты</a></li>
         </ul>
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    </nav>
-    <div class="hero container">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Programming Language Skills &amp; Expertise</p>
     </div>
-</header>
+</nav>
 
-<!-- Skills Section -->
-<section id="skills" class="skills">
-    <div class="container">
-        <div class="skill-card">
-            <img src="images/python-icon.svg" alt="Python logo" loading="lazy" width="64" height="64">
-            <h3>Python</h3>
-            <p>Advanced proficiency: data analysis, web development, automation.</p>
-        </div>
-        <div class="skill-card">
-            <img src="images/java-icon.svg" alt="Java logo" loading="lazy" width="64" height="64">
-            <h3>Java</h3>
-            <p>Intermediate proficiency: Spring Boot, REST APIs, multithreading.</p>
-        </div>
-        <div class="skill-card">
-            <img src="images/javascript-icon.svg" alt="JavaScript logo" loading="lazy" width="64" height="64">
-            <h3>JavaScript</h3>
-            <p>Intermediate proficiency: ES6+, DOM, async programming.</p>
-        </div>
-        <div class="skill-card">
-            <img src="images/html5-icon.svg" alt="HTML5 logo" loading="lazy" width="64" height="64">
-            <h3>HTML5 &amp; CSS3</h3>
-            <p>Advanced proficiency: responsive layouts, Flexbox, Grid.</p>
-        </div>
+<section id="hero" class="hero">
+    <h1>Добро пожаловать!</h1>
+</section>
+
+<section id="about" class="about container">
+    <h2>Обо мне</h2>
+    <p>Привет, я Гучиев Магомед-Башир, увлечённый разработчик, создающий масштабируемые сервисы.</p>
+</section>
+
+<section id="skills" class="skills container">
+    <div class="skill-card">
+        <img src="images/python-icon.svg" alt="Python logo" loading="lazy" width="64" height="64">
+        <h3>Python</h3>
+        <p>Advanced proficiency: data analysis, web development, automation.</p>
+    </div>
+    <div class="skill-card">
+        <img src="images/java-icon.svg" alt="Java logo" loading="lazy" width="64" height="64">
+        <h3>Java</h3>
+        <p>Intermediate proficiency: Spring Boot, REST APIs, multithreading.</p>
+    </div>
+    <div class="skill-card">
+        <img src="images/javascript-icon.svg" alt="JavaScript logo" loading="lazy" width="64" height="64">
+        <h3>JavaScript</h3>
+        <p>Intermediate proficiency: ES6+, DOM, async programming.</p>
+    </div>
+    <div class="skill-card">
+        <img src="images/html5-icon.svg" alt="HTML5 logo" loading="lazy" width="64" height="64">
+        <h3>HTML5 &amp; CSS3</h3>
+        <p>Advanced proficiency: responsive layouts, Flexbox, Grid.</p>
     </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <picture>
-            <img src="images/developer-portrait.jpeg" alt="Developer portrait" loading="lazy" width="300" height="300">
-        </picture>
-        <p>Hi, I'm Guchiev Magomed-Bashir, a passionate software developer specializing in back-end and scripting with Python and Java. I enjoy automating workflows, building scalable services, and learning new technologies.</p>
+<section id="projects" class="projects container">
+    <h2>Проекты</h2>
+    <div class="project-list">
+    </div>
+    <div class="thumbs">
+        <img src="images/photo1.jpeg" data-index="0" alt="Фото 1">
+        <img src="images/photo2.jpeg" data-index="1" alt="Фото 2">
+        <img src="images/photo3.jpeg" data-index="2" alt="Фото 3">
+    </div>
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox__nav lightbox__nav--prev">&larr;</button>
+        <img class="lightbox__img" src="" alt="Увеличенное фото">
+        <button class="lightbox__nav lightbox__nav--next">&rarr;</button>
+        <button class="lightbox__close">&times;</button>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <form id="contact-form" novalidate>
+
+<section id="contact" class="contact container">
+    <button id="contact-btn" class="btn">Обратная связь</button>
+</section>
+
+
+<div id="contact-modal" class="modal">
+    <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h2>Свяжитесь со мной</h2>
+        <form id="modal-form" novalidate>
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Имя</label>
                 <input type="text" id="name" name="name" required>
-                <span class="error" aria-live="polite"></span>
+                <span class="error"></span>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-                <span class="error" aria-live="polite"></span>
+                <span class="error"></span>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <span class="error" aria-live="polite"></span>
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" name="phone" required>
+                <span class="error"></span>
             </div>
-            <button type="submit">Send Message</button>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <span class="error"></span>
+            </div>
+            <button type="submit" class="btn submit-btn">Отправить</button>
         </form>
     </div>
-</section>
+</div>
 
-<!-- Footer -->
+<div id="promo-modal" class="modal">
+    <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h2>Не пропустите!</h2>
+        <p>Подпишитесь на нашу рассылку.</p>
+    </div>
+</div>
+
+<div id="countdown" class="countdown container">
+    До диплома: <span id="timer"></span>
+</div>
+
+<svg id="design-svg" width="200" height="200" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" stroke="#C5A47E" fill="none" stroke-width="2"/>
+</svg>
+
 <footer class="site-footer">
     <div class="container">
         <p>&copy; 2025 My Portfolio</p>
     </div>
 </footer>
 
-<!-- Minified Script -->
-<script src="dist/script.min.js" defer></script>
+<script src="js/script.js" defer></script>
 </body>
-
 </html>
