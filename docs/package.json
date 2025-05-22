@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "portfolio2",
   "version": "1.0.0",
   "scripts": {
     "minify:css": "npx clean-css-cli -o dist/style.min.css docs/css/style.css",
