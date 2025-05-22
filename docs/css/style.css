@@ -1,4 +1,3 @@
-/* Reset and base styles */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -31,7 +30,6 @@ body {
     margin: 0 auto;
 }
 
-/* Navbar */
 .site-header { background: var(--primary-color); position: relative; }
 .navbar { display: flex; align-items: center; justify-content: space-between; padding: var(--spacing) 0; }
 .logo { font-size: 1.5rem; color: var(--text-color); text-decoration: none; }
@@ -50,12 +48,10 @@ body {
     .menu-toggle { display: none; }
 }
 
-/* Hero */
 .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6rem 0; text-align: center; background: var(--primary-color); color: var(--text-color); }
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
 .hero p { font-size: 1.5rem; }
 
-/* Skills Section */
 .skills { padding: 4rem 0; background: #f9f9f9; }
 .skills .container { display: flex; flex-direction: column; gap: var(--spacing); }
 @media (min-width: 768px) {
@@ -68,7 +64,7 @@ body {
     padding: 1.5rem;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* allow content to wrap */
+    flex-wrap: wrap;
 }
 .skill-card img {
     margin-right: var(--spacing);
@@ -79,14 +75,14 @@ body {
 .skill-card h3 {
     margin: 0;
     font-size: 1.25rem;
-    flex: 1 1 100%; /* full width on new line if needed */
+    flex: 1 1 100%;
     min-width: 0;
 }
 .skill-card p {
     margin: 0;
     font-size: 0.95rem;
     color: #555;
-    flex: 1 1 100%; /* wrap under title */
+    flex: 1 1 100%;
     min-width: 0;
     overflow-wrap: break-word;
 }
@@ -94,14 +90,12 @@ body {
 .skill-card h3 { margin: 0 1rem 0 0; font-size: 1.25rem; }
 .skill-card p { margin: 0; font-size: 0.95rem; color: #555; }
 
-/* About */
 .about { padding: 4rem 0; }
 .about .container { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
 @media (min-width: 768px) { .about .container { flex-direction: row; align-items: center; } }
 .about img { border-radius: 50%; width: 300px; height: 300px; object-fit: cover; }
 .about p { max-width: 700px; text-align: center; }
 
-/* Contact */
 .contact { padding: 4rem 0; background: #f1f1f1; }
 .contact .container { display: flex; justify-content: center; }
 .contact form { width: 100%; max-width: 600px; }
@@ -113,10 +107,8 @@ body {
 button[type="submit"] { display: block; width: 100%; padding: 0.75rem; background: var(--accent-color); color: #000; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
 button[type="submit"]:hover { opacity: 0.9; }
 
-/* Footer */
 .site-footer { text-align: center; padding: 2rem 0; background: var(--primary-color); color: var(--text-color); }
 
-/* Responsive Skill Cards */
 .skills .container {
     display: flex;
     flex-wrap: wrap;

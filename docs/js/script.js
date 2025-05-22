@@ -1,7 +1,6 @@
-// Mobile menu toggle and form validation
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('nav-active');
     });
 
-    // Form validation logic
     const form = document.getElementById('contact-form');
     const fields = ['name', 'email', 'message'];
 
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const input = document.getElementById(id);
             const errorSpan = input.nextElementSibling;
 
-            // Reset previous error
             errorSpan.textContent = '';
 
             if (!input.checkValidity()) {
@@ -37,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isValid) {
-            // TODO: Implement actual submission (e.g., via fetch API)
             form.reset();
             alert('Thank you! Your message has been sent.');
         }
     });
 
-    // Clear errors on input
     fields.forEach(id => {
         const input = document.getElementById(id);
         const errorSpan = input.nextElementSibling;
